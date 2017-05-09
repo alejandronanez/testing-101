@@ -54,14 +54,11 @@ function getStringNoSpaces(word) {
 function isPalindrome(word) {
     const normal = getStringNoSpaces(word);
     const backwards = getStringReversed(word);
-    let index = normal.length;
 
     for(let i = 0; i < normal.length; i++) {
-        if (normal[i] !== backwards[index]) {
+        if (normal[i] !== backwards[i]) {
             return false
         }
-
-        index--;
     };
 
     return true;
